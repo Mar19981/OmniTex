@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OmniTexClass</class>
+ <widget class="QMainWindow" name="OmniTexClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OmniTex</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icon.ico</normaloff>Icon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow, QProgressBar, QStackedWidget, QComboBox, QDialog, QMenuBar,  QDoubleSpinBox, QSpinBox, QLineEdit, QComboBox QAbstractItemView {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(12, 12, 13, 255), stop:1 rgba(45, 45, 48, 255));
+	color: #e0e0e0;
+}
+QComboBox, QDoubleSpinBox, QSpinBox, QLineEdit, QProgressBar {
+     border: 0.25ex solid rgb(184, 17, 53);
+     border-radius: 1px;
+}
+QProgressBar, QComboBox {
+	text-align: center;
+}
+QProgressBar:chunk {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(183, 15, 53, 255), stop:1 rgba(133, 11, 38, 255));
+}
+QGroupBox {
+     background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(23, 23, 25, 255), stop:1 rgba(47, 47, 50, 255));
+     border: 2px solid rgb(184, 17, 53);
+     border-radius: 5px;
+	color: #E0E0E0;
+     margin-top: 1ex; 
+ }
+
+ QGroupBox::title {
+     subcontrol-origin: margin;
+     subcontrol-position: top center; /* position at the top center */
+     padding: 0 3px;
+ }
+QLabel, QCheckBox {
+	color: #E0E0E0;
+}
+QCheckBox:indicator {
+border: 0.25ex solid rgb(184, 17, 53);
+     border-radius: 5px;
+}
+QCheckBox:indicator:disabled {
+border: 0.25ex solid #A0A0A0;
+}
+QCheckbox:disabled {
+color: #A0A0A0;
+}
+QCheckBox:indicator, QCheckBox:indicator:unchecked
+{
+	background-color:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.505, fy:0.494318, stop:0 rgba(70, 70, 74, 255), stop:1 rgba(30, 30, 32, 255)); 
+}
+QCheckBox:indicator:checked
+{
+background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.495, fy:0.488636, stop:0 rgba(184, 17, 53, 255), stop:1 rgba(119, 11, 34, 255)); 
+}
+#preview {
+	border: 0.25ex solid rgb(184, 17, 53);
+}
+QPushButton {
+	background: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(183, 15, 53, 255), stop:1 rgba(133, 11, 38, 255));
+     border-radius: 2px;
+	color: #e0e0e0;
+	padding: 2ex;
+}
+QPushButton:hover {
+border: 0.25ex solid rgba(183, 15, 53, 255);
+}
+QPushButton:pressed {
+border: 0.25ex solid rgba(183, 15, 53, 255);
+border-style: inset;
+}
+QSlider:groove:horizontal {
+height: 2ex;
+     border-radius: 2px;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(183, 15, 53, 255), stop:1 rgba(133, 11, 38, 255))
+}
+QSlider:groove:horizontal:disabled {
+background: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:1, stop:0 rgba(96, 96, 96, 255), stop:1 rgba(199, 199, 199, 255));
+}
+QSlider:handle:horizontal {
+	    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 3ex;
+	height: 3ex;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 3px;
+}
+QSlider:handle:horizontal:hover {
+	    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #e0e0e0, stop:1 #b4b4b4);
+}
+QSlider:handle:horizontal:disabled {
+	    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #e0e0e0, stop:1 #b4b4b4);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="widgets"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>733</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="OmniTex.qrc"/>
+ </resources>
+ <connections/>
+</ui>
